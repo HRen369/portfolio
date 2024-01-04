@@ -1,16 +1,19 @@
 body{
     margin: 0;
+    background-color: #161A30;
 }
 
 a{
  text-decoration: none;
- color:#FFFFFF;
+ color:#B6BBC4;
 }
+
+
 .nav-bar{
     display: flex;
-    background-color: #000000;
+    background-color: #31304D;
     height: 5em;
-    color: #FFFFFF;
+    color: #B6BBC4;
 }
 
 .nav-bar-left{
@@ -30,15 +33,22 @@ a{
 }
 
 .nav-bar-right a{
-    background-color: grey;
+    background-color: #161A30;
     padding: 0.5em;
     margin-left: 1em;
     margin-top: 0.5em;
+    border-radius: 5px;
+    box-shadow: 0.5px 0.5px;
+}
+
+.nav-bar-right a:hover{
+    background-color: #0b0d18;
 }
 
 .content{
     display: flex;
     margin-top: 1em;
+    color: #F0ECE5;
 }
 
 .self-img{
