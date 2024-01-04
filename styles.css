@@ -48,7 +48,8 @@ a{
 .content{
     display: flex;
     margin-top: 1em;
-    color: #F0ECE5;
+    color: #B6BBC4;
+    /*color: #F0ECE5;*/
 }
 
 .self-img{
@@ -57,4 +58,33 @@ a{
 
 .self-synopsis{
     margin-left: 1em;
+}
+
+/* Project*/
+
+.projects-content{
+    margin-top: 1em;
+    margin-left: 1em;
+    color: #B6BBC4;
+}
+
+.langauges{
+    border-color: #F0ECE5;
+    border-style: solid;
+    border-radius: 5px;
+    width: 10em;
+    
+}
+
+.langauges p{
+    margin: 0;
+    padding: 0.25em;
+}
+
+.langauges p:nth-child(even){
+    background-color: #31304D;
+}
+
+.langauges p:nth-child(odd){
+    background-color: rgb(44, 9, 113);
 }
