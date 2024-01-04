@@ -1,0 +1,17 @@
+.nav-bar{
+    display: flex;
+    height: 5em;
+}
+
+.nav-bar-left{
+    display: flex;
+}
+
+.nav-bar-right{
+    display: flex;
+    margin-left: 1em;
+}
+
+.content{
+    display: flex;
+}
