@@ -67,7 +67,7 @@ body{
     color: #B6BBC4;
 }
 
-.langauges{
+.lang-list{
     border-color: #F0ECE5;
     border-style: solid;
     border-radius: 5px;
@@ -75,20 +75,20 @@ body{
     height: 5em;
 }
 
-.langauges p{
+.lang-list p{
     margin: 0;
     padding: 0.25em;
 }
 
-.langauges p:nth-child(even){
+.lang-list p:nth-child(even){
     background-color: #31304D;
 }
 
-.langauges p:nth-child(odd){
+.lang-list p:nth-child(odd){
     background-color: rgb(44, 9, 113);
 }
 
-.d{
+#lang-proj-content{
      display: flex;
 }
 
