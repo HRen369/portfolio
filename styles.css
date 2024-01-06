@@ -3,11 +3,10 @@ body{
     background-color: #161A30;
 }
 
-a{
+.nav-bar-link{
  text-decoration: none;
  color:#B6BBC4;
 }
-
 
 .nav-bar{
     display: flex;
@@ -73,7 +72,7 @@ a{
     border-style: solid;
     border-radius: 5px;
     width: 10em;
-    
+    height: 5em;
 }
 
 .langauges p{
@@ -87,4 +86,30 @@ a{
 
 .langauges p:nth-child(odd){
     background-color: rgb(44, 9, 113);
+}
+
+.d{
+     display: flex;
+}
+
+.projects{
+    display: flex;
+}
+
+.project{
+    margin-left: 1em;
+    margin-top: 1em;
+    background-color: #0b0d18;
+    padding: 1em;
+    height: 5em;
+    width:8em;
+    border-radius: 5px;
+}
+
+
+.project-link{
+    text-decoration: none;
+    color:#B6BBC4;
+    font-size: large;
+    font-weight: bold;
 }
