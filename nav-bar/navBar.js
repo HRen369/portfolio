@@ -1,26 +1,26 @@
 const newTabLinks = [
     {
         "name":"Resume",
-        "link":"..\\Resume_Humberto_Rendon.pdf"
+        "link":"Resume_Humberto_Rendon.pdf"
     }
 ]
 
 const links = [
     {
         "name":"Projects",
-        "link":"..\\projects.html"
+        "link":"projects.html"
     },
     {
         "name":"Tutorials",
-        "link":"..\\tutorials.html"
+        "link":"tutorials.html"
     },
     {
         "name":"Contact Me",
-        "link":"..\\contact.html"
+        "link":"contact.html"
     },
     {
         "name":"About Me",
-        "link":"..\\aboutMe.html"
+        "link":"aboutMe.html"
     }
 ]
 
