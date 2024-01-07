@@ -54,9 +54,10 @@ const languageList = [
     },
     {
         "name":"Go",
-        "content":goProjects
+        "content":goProjects    
     }
 ]
+
 
 const projectContents = document.getElementById('lang-proj-content');
 
@@ -64,11 +65,15 @@ function languageListElement(){
     let langList = document.createElement(`div`);
     langList.classList.add(`lang-list`);
 
+    let i = 0;
     languageList.forEach((language) => {
         let singleLang = document.createElement('p');
         singleLang.textContent = `${language.name}`
+        singleLang.setAttribute('id',`comp-lang-${i}`);
+        singleLang.setAttribute('onclick', `setTab(${i})`)
         langList.appendChild(singleLang);
-    })
+        i++;
+    });
     return langList
 }
 
@@ -94,14 +99,14 @@ function projectCardsElement(projects){
         return projCards;
 }
 
-function setInitalState(){
-    setTab(1);    
-}
-
 function setTab(ind){
+    projectContents.innerHTML = "";
+
     let tabContent = languageList[ind].content
     projectContents.appendChild(languageListElement())
     projectContents.appendChild(projectCardsElement(tabContent))
+
+    //document.getElementById(`comp-lang-${ind}`).style.backgroundColor = "#1a1290";
 }
 
-setInitalState()
+setTab(0)
