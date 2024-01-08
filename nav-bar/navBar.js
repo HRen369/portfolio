@@ -77,14 +77,13 @@ function navBarRightElement(){
     return navBarRight;
 }
 
-function navBarCss(){
-    var cssId = 'nav-bar-css';  // you could encode the css path itself to generate id..
+function importCss(cssId,cssLink){
     if (!document.getElementById(cssId)){
         var link  = document.createElement('link');
         link.id   = cssId;
         link.rel  = 'stylesheet';
         link.type = 'text/css';
-        link.href = './nav-bar/navBar.css';
+        link.href = cssLink;
         link.media = 'all';
         return link;
     }
@@ -92,4 +91,4 @@ function navBarCss(){
 }
 
 document.body.appendChild(navBarElement());
-document.getElementsByTagName('head')[0].appendChild(navBarCss())
+document.getElementsByTagName('head')[0].appendChild(importCss('nav-bar-css','./nav-bar/navBar.css'));

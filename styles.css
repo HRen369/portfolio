@@ -18,67 +18,6 @@ body{
     margin-left: 1em;
 }
 
-/* Project*/
-
-.projects-content{
-    margin-top: 1em;
-    margin-left: 1em;
-    color: #B6BBC4;
-}
-
-.lang-list{
-    border-color: #F0ECE5;
-    border-style: solid;
-    border-radius: 5px;
-    width: 10em;
-    height: 5em;
-}
-
-.lang-list p{
-    margin: 0;
-    padding: 0.25em;
-}
-
-.lang-list p:nth-child(even){
-    background-color: #31304D;
-}
-
-.lang-list p:nth-child(odd){
-    background-color: #13025d;
-
-}
-
-.lang-list p:hover{
-    background-color: #0b0d18;
-}
-
-#lang-proj-content{
-     display: flex;
-}
-
-.project-cards{
-    display: flex;
-}
-
-.project{
-    margin-left: 1em;
-    margin-top: 1em;
-    background-color: #0b0d18;
-    padding: 1em;
-    height: 5em;
-    width:8em;
-    border-radius: 5px;
-}
-
-
-.project-link{
-    text-decoration: none;
-    color:#B6BBC4;
-    font-size: large;
-    font-weight: bold;
-}
-
-
 /*Contact*/
 .contact-content{
     color: #B6BBC4;

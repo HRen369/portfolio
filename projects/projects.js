@@ -110,3 +110,4 @@ function setTab(ind){
 }
 
 setTab(0)
+document.getElementsByTagName('head')[0].appendChild(importCss('projects-css','./projects/projects.css'));
