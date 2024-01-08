@@ -1,7 +1,7 @@
 const newTabLinks = [
     {
         "name":"Resume",
-        "link":"./Resume_Humberto_Rendon.pdf"
+        "link":"./resume/Resume_Humberto_Rendon.pdf"
     }
 ]
 
