@@ -77,5 +77,19 @@ function navBarRightElement(){
     return navBarRight;
 }
 
+function navBarCss(){
+    var cssId = 'nav-bar-css';  // you could encode the css path itself to generate id..
+    if (!document.getElementById(cssId)){
+        var link  = document.createElement('link');
+        link.id   = cssId;
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './nav-bar/navBar.css';
+        link.media = 'all';
+        return link;
+    }
+    return document.createElement('link');
+}
 
 document.body.appendChild(navBarElement());
+document.getElementsByTagName('head')[0].appendChild(navBarCss())
