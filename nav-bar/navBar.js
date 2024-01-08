@@ -40,7 +40,7 @@ function navBarLeftElement(){
     let navBarHomeLink = document.createElement('a');
     navBarHomeLink.classList.add('home-link');
     navBarHomeLink.classList.add('nav-bar-link');
-    navBarHomeLink.setAttribute('href','..\\index.html');
+    navBarHomeLink.setAttribute('href','./index.html');
 
     let navBarHomeImg = document.createElement('img');
     navBarHomeImg.style.height = "25px";
