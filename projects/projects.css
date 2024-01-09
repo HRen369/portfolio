@@ -36,7 +36,8 @@
 }
 
 .project-cards{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .project{
@@ -48,7 +49,6 @@
     width:8em;
     border-radius: 5px;
 }
-
 
 .project-link{
     text-decoration: none;

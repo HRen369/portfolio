@@ -83,17 +83,15 @@ function projectCardsElement(projects){
         projCards.classList.add(`project-cards`);
 
         projects.forEach((project) => {
-             let singleProjCard = document.createElement('div')
-             singleProjCard.classList.add(`project`); 
 
              let projCardLink = document.createElement('a')
              projCardLink.classList.add(`project-link`);
              projCardLink.setAttribute('href', `${project.link}`);
+             projCardLink.classList.add('project');
              projCardLink.setAttribute('target', `_blank`);             
              projCardLink.textContent = `${project.name}`
             
-            singleProjCard.appendChild(projCardLink);
-            projCards.appendChild(singleProjCard);
+            projCards.appendChild(projCardLink);
         })
 
         return projCards;
