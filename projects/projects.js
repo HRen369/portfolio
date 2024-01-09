@@ -15,6 +15,10 @@ const htmlCssJsProjects = [
 
 const pythonProjects = [
     {
+        "name":"Name Generator",
+        "link":"https://github.com/HRen369/simple-projects/tree/main/python/001-name-generator"
+    },
+    {
         "name":"Tic-Tac-Toe",
         "link":"https://github.com/HRen369/simple-projects/tree/main/python/tic-tac-toe"
     },
