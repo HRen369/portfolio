@@ -19,6 +19,14 @@ const pythonProjects = [
         "link":"https://github.com/HRen369/simple-projects/tree/main/python/001-name-generator"
     },
     {
+        "name":"Head Tails Generator",
+        "link":"https://github.com/HRen369/simple-projects/tree/main/python/002-head-tails"
+    },
+    {
+        "name":"Lower-Higher Game",
+        "link":"https://github.com/HRen369/simple-projects/tree/main/python/003-lower-higher"
+    },
+    {
         "name":"Tic-Tac-Toe",
         "link":"https://github.com/HRen369/simple-projects/tree/main/python/tic-tac-toe"
     },
