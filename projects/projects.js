@@ -27,6 +27,14 @@ const pythonProjects = [
         "link":"https://github.com/HRen369/simple-projects/tree/main/python/003-lower-higher"
     },
     {
+        "name":"Temp Converter",
+        "link":"https://github.com/HRen369/simple-projects/tree/main/python/004-temp-converter"
+    },
+    {
+        "name":"Age Calculator",
+        "link":"https://github.com/HRen369/simple-projects/tree/main/python/005-calculateAge"
+    },
+    {
         "name":"Tic-Tac-Toe",
         "link":"https://github.com/HRen369/simple-projects/tree/main/python/tic-tac-toe"
     },
