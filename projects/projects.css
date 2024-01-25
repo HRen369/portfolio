@@ -31,10 +31,6 @@
     background-color: #0b0d18;
 }
 
-#lang-proj-content{
-     display: flex;
-}
-
 .project-cards{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
