@@ -42,12 +42,7 @@ function navBarLeftElement(){
     navBarHomeLink.classList.add('nav-bar-link');
     navBarHomeLink.setAttribute('href','./index.html');
 
-    let navBarHomeImg = document.createElement('img');
-    navBarHomeImg.style.height = "25px";
-    navBarHomeImg.style.width = "25px";
     navBarHomeLink.textContent = "Humberto Rendon";
-
-    navBarHomeLink.prepend(navBarHomeImg);
     navBarLeft.appendChild(navBarHomeLink);
     return navBarLeft;
 }
