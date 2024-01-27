@@ -47,11 +47,39 @@ const allProjects = () =>{
 
 
 function displayCards(projectList){
+    cardsGrid.innerHTML = "";
     projectList.forEach(project => {
         cardsGrid.appendChild(project)
     });
 }
 
-displayCards(allProjects())
 
+function dropdownMenu(){
+    let dropdown = document.createElement("div");
+    dropdown.classList.add('dropdown-content');
+
+    let allLink = document.createElement("div");
+    allLink.textContent = "All";
+    allLink.addEventListener("click",() =>{
+        displayCards(allProjects());
+    });
+
+    dropdown.appendChild(allLink);
+    projectContainers.forEach((projectList) =>{
+        let link = document.createElement('div');
+        link.textContent = `${projectList['name']}`;
+        link.addEventListener("click",() =>{
+             let projCards = projectList['content'].map((proj) =>{
+                return createProjectCard(proj);
+            });
+            displayCards(projCards);
+        });
+        
+        dropdown.appendChild(link);
+    })
+    return dropdown;
+}
+
+displayCards(allProjects())
+document.getElementById('lang-dropdown').appendChild(dropdownMenu());
 document.getElementsByTagName('head')[0].appendChild(importCss('projects-css','./projects/projects.css'));
