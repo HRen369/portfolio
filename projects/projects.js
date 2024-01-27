@@ -1,150 +1,57 @@
-const htmlCssJsProjects = [
-    {
-        "name":"Expense Calculator",
-        "link":"https://github.com/HRen369/simple-projects/tree/main/htmlCssJs/expenseCalculator",
-        "status": true
-    },
-    {
-        "name":"Digital Clock",
-        "link":"https://github.com/HRen369/simple-projects/tree/main/htmlCssJs/digitalClock",
-        "status": true
-    },
-    {
-        "name":"Old To Do List",
-        "link":"https://github.com/HRen369/simple-projects/tree/main/htmlCssJs/oldToDoList",
-        "status": true
+let cardsGrid = document.getElementById("cards-grid");
+
+function createProjectCard(proj){
+    let card = document.createElement("a");
+    let cardTitle = document.createElement("p");
+    let cardProjLang = document.createElement("p");
+    let cardStatus = document.createElement("p");
+
+    card.classList.add("card");
+    cardTitle.classList.add("card-link");
+    card.setAttribute('href',`${proj['link']}`);
+    card.setAttribute('target',`__blank`);
+    cardProjLang.classList.add("card-lang");
+    cardStatus.classList.add("card-status")
+
+    cardTitle.textContent = `${proj['name']}`;
+    cardProjLang.textContent = `${proj['lang']}`;
+    cardStatus.textContent = "Status: ";
+
+    if(proj['status'] == false){
+        cardStatus.textContent += "Incomplete";
     }
-]
-
-const pythonProjects = [
-    {
-        "name":"Name Generator",
-        "link":"https://github.com/HRen369/simple-projects/tree/main/python/001-name-generator",
-        "status": true
-    },
-    {
-        "name":"Head Tails Generator",
-        "link":"https://github.com/HRen369/simple-projects/tree/main/python/002-head-tails",
-        "status": true
-    },
-    {
-        "name":"Lower-Higher Game",
-        "link":"https://github.com/HRen369/simple-projects/tree/main/python/003-lower-higher",
-        "status": true
-    },
-    {
-        "name":"Temp Converter",
-        "link":"https://github.com/HRen369/simple-projects/tree/main/python/004-temp-converter",
-        "status": true
-    },
-    {
-        "name":"Age Calculator",
-        "link":"https://github.com/HRen369/simple-projects/tree/main/python/005-calculateAge",
-        "status": false
-    },
-    {
-        "name":"Encryptions",
-        "link":"https://github.com/HRen369/simple-projects/tree/main/python/006-encryptions",
-        "status": false
-    },
-    {
-        "name":"Fizz Buzz",
-        "link":"https://github.com/HRen369/simple-projects/tree/main/python/007-fizzbuzz",
-        "status": false
-    },
-    {
-        "name":"Rock Paper Scissors",
-        "link":"https://github.com/HRen369/simple-projects/tree/main/python/008-rock-paper-scissors",
-        "status": true
-    },
-    {
-        "name":"Hangman",
-        "link":"https://github.com/HRen369/simple-projects/tree/main/python/010-hangman",
-        "status": true
-    },    
-    {
-        "name":"Tic-Tac-Toe",
-        "link":"https://github.com/HRen369/simple-projects/tree/main/python/tic-tac-toe",
-        "status": true
-    },
-    {
-        "name":"Keylogger",
-        "link":"https://github.com/HRen369/simple-projects/tree/main/python/keylogger",
-        "status": true
-    },
-    {
-        "name":"Password Manager",
-        "link":"https://github.com/HRen369/simple-projects/tree/main/python/password-manager",
-        "status": true
-    },
-]
-
-const goProjects = []
-
-
-const languageList = [
-    {
-        "name":"HTML, CSS, JS",
-        "content":htmlCssJsProjects
-    },
-    {
-        "name":"Python",
-        "content":pythonProjects
-    },
-    {
-        "name":"Go",
-        "content":goProjects    
+    else{
+        cardStatus.textContent += "Complete";
     }
-]
 
 
-const projectContents = document.getElementById('lang-proj-content');
-
-function languageListElement(){
-    let langList = document.createElement(`div`);
-    langList.classList.add(`lang-list`);
-
-    let i = 0;
-    languageList.forEach((language) => {
-        let singleLang = document.createElement('p');
-        singleLang.textContent = `${language.name}`
-        singleLang.setAttribute('id',`comp-lang-${i}`);
-        singleLang.setAttribute('onclick', `setTab(${i})`)
-        langList.appendChild(singleLang);
-        i++;
-    });
-    return langList
+    card.appendChild(cardTitle);
+    card.appendChild(cardProjLang);
+    card.appendChild(cardStatus);
+    return card;
 }
 
-
-function projectCardsElement(projects){
-        let projCards = document.createElement('div');
-        projCards.classList.add(`project-cards`);
-
-        projects.forEach((project) => {
-
-             let projCardLink = document.createElement('a')
-             projCardLink.classList.add(`project-link`);
-             projCardLink.setAttribute('href', `${project.link}`);
-             projCardLink.classList.add('project');
-             projCardLink.setAttribute('target', `_blank`);             
-             projCardLink.textContent = `${project.name}`
-            
-            projCards.appendChild(projCardLink);
+const allProjects = () =>{
+    let allProjects = [];
+    projectContainers.forEach((projectList) =>{
+        currentProjects = [];
+        projectList["content"].forEach((project) => {
+            project['lang'] = projectList['name']
+            currentProjects.push(createProjectCard(project));
         })
+        allProjects = allProjects.concat(currentProjects);
+    })
 
-        return projCards;
+    return allProjects;
 }
 
-function setTab(ind){
-    projectContents.innerHTML = "";
 
-    let tabContent = languageList[ind].content
-    projectContents.appendChild(languageListElement())
-    projectContents.appendChild(projectCardsElement(tabContent))
-
-    //document.getElementById(`comp-lang-${ind}`).style.backgroundColor = "#1a1290";
+function displayCards(projectList){
+    projectList.forEach(project => {
+        cardsGrid.appendChild(project)
+    });
 }
 
-setTab(0)
+displayCards(allProjects())
+
 document.getElementsByTagName('head')[0].appendChild(importCss('projects-css','./projects/projects.css'));

@@ -5,50 +5,42 @@
     color: #B6BBC4;
 }
 
-.lang-list{
-    border-color: #F0ECE5;
-    border-style: solid;
-    border-radius: 5px;
-    width: 10em;
-    height: 5em;
-}
-
-.lang-list p{
-    margin: 0;
-    padding: 0.25em;
-}
-
-.lang-list p:nth-child(even){
-    background-color: #31304D;
-}
-
-.lang-list p:nth-child(odd){
-    background-color: #13025d;
-
-}
-
-.lang-list p:hover{
-    background-color: #0b0d18;
-}
-
-.project-cards{
+#cards-grid{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    margin-right: 10em;
+    margin-left: 10em;
 }
 
-.project{
+.card{
+    text-decoration: none;
     margin-left: 1em;
     margin-top: 1em;
     background-color: #0b0d18;
     padding: 1em;
-    height: 5em;
+    height: 6em;
     width:8em;
     border-radius: 5px;
 }
 
-.project-link{
+.card-link{
+    margin: 0;
     text-decoration: none;
     color:#B6BBC4;
     font-size: large;
+    font-weight: bold;
+}
+
+.card-lang{
+    text-decoration: none;
+    color:#B6BBC4;
+    font-size: small;
+    font-weight: bold;
+}
+
+.card-status{
+    text-decoration: none;
+    color:#B6BBC4;
+    font-size: small;
     font-weight: bold;
 }
