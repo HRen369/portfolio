@@ -54,6 +54,9 @@ function displayCards(projectList){
 }
 
 
+let displayCardsFunt = () => { displayCards(allProjects()) };
+displayCardsFunt();
+
 function dropdownMenu(){
     let dropdown = document.createElement("div");
     dropdown.classList.add('dropdown-content');
@@ -61,7 +64,7 @@ function dropdownMenu(){
     let allLink = document.createElement("div");
     allLink.textContent = "All";
     allLink.addEventListener("click",() =>{
-        displayCards(allProjects());
+        displayCardsFunt = displayCards(allProjects());
     });
 
     dropdown.appendChild(allLink);
@@ -72,7 +75,7 @@ function dropdownMenu(){
              let projCards = projectList['content'].map((proj) =>{
                 return createProjectCard(proj);
             });
-            displayCards(projCards);
+            displayCardsFunt = displayCards(projCards);
         });
         
         dropdown.appendChild(link);
@@ -80,6 +83,6 @@ function dropdownMenu(){
     return dropdown;
 }
 
-displayCards(allProjects())
+
 document.getElementById('lang-dropdown').appendChild(dropdownMenu());
 document.getElementsByTagName('head')[0].appendChild(importCss('projects-css','./projects/projects.css'));
