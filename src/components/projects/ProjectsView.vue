@@ -15,9 +15,9 @@ const projects = ref(htmlCssJsProjects);
         <h3>Python</h3>
         <h3>Go</h3>
         <h3>Advanced Projects</h3>
-        <ProjectCards :projects="projects"/>
-
     </div>
+    <ProjectCards :projects="projects"/>
+
 </template>
 
 <style>
