@@ -1,9 +1,26 @@
 <script setup>
 import { ref } from 'vue';
 import ProjectCards from "./ProjectCards.vue";
-import { htmlCssJsProjects } from './ProjectsData';
+import { htmlCssJsProjects, pythonProjects,goProjects,advancedProjects } from './ProjectsData';
 
 const projects = ref(htmlCssJsProjects);
+
+function changeProjectContents(num){
+    switch(num){
+        case 0:
+            projects.value = htmlCssJsProjects
+            break;
+        case 1:
+            projects.value = pythonProjects
+            break;
+        case 2:
+            projects.value = goProjects
+            break;
+        case 3:
+            projects.value = advancedProjects;
+            break;
+    }
+}
 
 </script>
 
@@ -11,10 +28,10 @@ const projects = ref(htmlCssJsProjects);
     <h1 class="title">Projects</h1>
     <hr/>
     <div class="project-nav">
-        <h3>HTML/CSS/JS</h3>
-        <h3>Python</h3>
-        <h3>Go</h3>
-        <h3>Advanced Projects</h3>
+        <h3 @click="changeProjectContents(0)">HTML/CSS/JS</h3>
+        <h3 @click="changeProjectContents(1)">Python</h3>
+        <h3 @click="changeProjectContents(2)">Go</h3>
+        <h3 @click="changeProjectContents(3)">Advanced Projects</h3>
     </div>
     <ProjectCards :projects="projects"/>
 

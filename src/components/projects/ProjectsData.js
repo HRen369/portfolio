@@ -79,11 +79,11 @@ export const pythonProjects = [
     },
 ]
 
-const goProjects = []
+export const goProjects = []
 
 
 
-const bigProjects = [
+export const advancedProjects = [
     {
         "name":"Shport",
         "link":"https://github.com/HRen369/simple-projects/tree/main/bigProjects",
