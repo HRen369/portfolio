@@ -1,11 +1,20 @@
 body{
   margin: 0;
   background-color: #161A30;
+  color: #B6BBC4;
 }
 
 .content{
   display: flex;
   margin-top: 1em;
   color: #B6BBC4;
+  /*color: #F0ECE5;*/
+}
+
+.title{
+  display: flex;
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  margin-bottom: 0;
   /*color: #F0ECE5;*/
 }
