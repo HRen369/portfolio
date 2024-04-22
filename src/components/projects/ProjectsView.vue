@@ -1,13 +1,22 @@
 <script setup>
+import { ref } from 'vue';
+import ProjectCards from "./ProjectCards.vue";
+import { htmlCssJsProjects } from './ProjectsData';
+
+const projects = ref(htmlCssJsProjects);
+
 </script>
 
 <template>
     <h1 class="title">Projects</h1>
     <hr/>
     <div class="project-nav">
-        <h3>Beginner</h3>
-        <h3>Intermediate</h3>
-        <h3>Advanced</h3>
+        <h3>HTML/CSS/JS</h3>
+        <h3>Python</h3>
+        <h3>Go</h3>
+        <h3>Advanced Projects</h3>
+        <ProjectCards :projects="projects"/>
+
     </div>
 </template>
 
