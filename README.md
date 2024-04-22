@@ -1,4 +1,29 @@
-# Personal Portfolio
-This is my person portfolio website. It's made with HTML, CSS and JS. A lot of this code can be done better but right now, I'm just trying to understand how to make a portfolio website.
+# portfolio
 
-Currently, this portfolio is a work in progress.
+This template should help get you started developing with Vue 3 in Vite.
+
+## Recommended IDE Setup
+
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Compile and Minify for Production
+
+```sh
+npm run build
+```

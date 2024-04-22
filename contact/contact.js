@@ -1,1 +1,0 @@
-document.getElementsByTagName('head')[0].appendChild(importCss('contact-css','./contact/contact.css'));
