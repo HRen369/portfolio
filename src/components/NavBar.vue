@@ -10,14 +10,14 @@ const links = [
     //     "name":"Tutorials",
     //     "link":"./tutorials.html"
     // },
-    // {
-    //     "name":"Contact Me",
-    //     "link":"/contact"
-    // },
-    // {
-    //     "name":"About Me",
-    //     "link":"/aboutMe"
-    // }
+    {
+        "name":"Contact Me",
+        "link":"/contact"
+    },
+    {
+        "name":"About Me",
+        "link":"/about"
+    }
 ]
 
 </script>
