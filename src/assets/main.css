@@ -1,0 +1,11 @@
+body{
+  margin: 0;
+  background-color: #161A30;
+}
+
+.content{
+  display: flex;
+  margin-top: 1em;
+  color: #B6BBC4;
+  /*color: #F0ECE5;*/
+}

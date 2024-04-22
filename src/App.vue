@@ -2,8 +2,8 @@
 </script>
 
 <template>
-  New Portflio
+    <RouterView/>
 </template>
 
-<style scoped>
+<style>
 </style>
