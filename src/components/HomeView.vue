@@ -9,3 +9,14 @@
         </div>
     </div>
 </template>
+
+<style>
+
+.self-img{
+    margin-left: 1em;
+}
+
+.self-synopsis{
+    margin-left: 1em;
+}
+</style>
