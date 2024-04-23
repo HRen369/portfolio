@@ -4,22 +4,25 @@ const props = defineProps(['projects'])
 </script>
 
 <template>
-    <div class="cards-content" v-for="project of props.projects">
-        <a target="_blank" class="links" :href="project.link">
-            <div class="card">
-                <p class="card-name">{{ project.name }}</p>
-                <p  class="card-status" v-if="project.status===false">Incomplete</p>
-                <p  class="card-status" v-else>Complete</p>
-            </div>
-        </a>
+    <div class="cards-content">
+        <div v-for="project of props.projects">
+            <a target="_blank" class="links" :href="project.link">
+                <div class="card">
+                    <p class="card-name">{{ project.name }}</p>
+                    <p  class="card-status" v-if="project.status===false">Incomplete</p>
+                    <p  class="card-status" v-else>Complete</p>
+                </div>
+            </a>
+        </div>
     </div>
 </template>
 
 <style>
 .cards-content{
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-
 
 .links{
     text-decoration: none;

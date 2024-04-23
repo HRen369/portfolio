@@ -81,8 +81,6 @@ export const pythonProjects = [
 
 export const goProjects = []
 
-
-
 export const advancedProjects = [
     {
         "name":"Shport",

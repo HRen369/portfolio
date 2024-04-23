@@ -1,3 +1,4 @@
 <template>
-    <h1>About Me</h1>
+    <h1 class="title">About Me</h1>
+    <hr/>
 </template>
